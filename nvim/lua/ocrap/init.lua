@@ -1,11 +1,21 @@
-require("ocrap.remap")
 require("ocrap.set")
+require("ocrap.remap")
 
-require("nvim-surround").setup({
-    keymaps = {
-        normal = "ms",
-        normal_cur = "mss",
-        normal_line = "mS",
-        normal_cur_line = "mSS",
-    }
-})
+-- vim.cmd([[
+--     augroup associate_asm
+--         autocmd!
+--         autocmd BufReadPre *.asm let g:asmsyntax = "fasm"
+--         autocmd BufReadPre *.s let g:asmsyntax = "fasm"
+--     augroup END
+-- ]])
+
+-- vim.api.nvim_create_autocmd('BufWritePre', {
+-- 	desc = 'associate file endings',
+
+-- 	group = vim.api.nvim_create_augroup('black_on_save', { clear = true }),
+-- 	callback = function (opts)
+-- 		if vim.bo[opts.buf].filetype == 'python' then
+-- 			vim.cmd 'Black'
+-- 		end
+-- 	end,
+-- })

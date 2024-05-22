@@ -42,3 +42,13 @@ require('mason-lspconfig').setup({
 	},
 })
 
+require('lspconfig')['ltex'].setup {
+    filetypes = { "bib", "gitcommit", "markdown", "org", "plaintex", "rst", "rnoweb", "tex", "pandoc", "quarto", "rmd", "context", "html", "xhtml" },
+    settings = {
+      ltex = {
+        language = {"en-US"},
+        enabled = { "bibtex", "gitcommit", "markdown", "org", "tex", "restructuredtext", "rsweave", "latex", }
+        --disabledRules = { ['en-US'] = { 'PROFANITY' } },
+      },
+    },
+}
