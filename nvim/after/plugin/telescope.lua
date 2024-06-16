@@ -1,8 +1,10 @@
 local builtin = require('telescope.builtin')
+local utils = require('telescope.utils')
 vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 
+vim.keymap.set('n', '<leader>fh', function () builtin.find_files({ cwd = utils.buffer_dir() }) end, {})
 vim.keymap.set('n', '<leader>fa', function () builtin.find_files({ no_ignore = true }) end, {})
 vim.keymap.set('n', '<leader>fu', function () builtin.live_grep({ additional_args = { '--hidden' } }) end, {})
 
@@ -15,7 +17,7 @@ require("telescope").setup {
     defaults = {
         mappings = {
             i = {
-                ["<C-p>"] = require "telescope.actions".file_vsplit,
+                ["<C-l>"] = require "telescope.actions".file_vsplit,
             }
         }
     },
@@ -27,7 +29,7 @@ require("telescope").setup {
             mappings = {
                 ["i"] = {
                     -- your custom insert mode mappings
-                    ["<C-p>"] = require "telescope.actions".file_vsplit,
+                    ["<C-l>"] = require "telescope.actions".file_vsplit,
                 },
                 ["n"] = {
                     -- your custom normal mode mappings

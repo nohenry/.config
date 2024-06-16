@@ -1,5 +1,5 @@
 require("ocrap")
-
+-- require("autoclose").setup()
 vim.cmd[[colorscheme horizon]]
 
 vim.g.lightline = {
@@ -9,10 +9,6 @@ vim.g.lightline = {
 vim.o.cursorline = true
 vim.o.cursorlineopt = 'number'
 
-vim.cmd[[xnoremap il g_o_]]
-vim.cmd[[onoremap il :normal vil<CR>]]
-vim.cmd[[xnoremap al g_o0 ]]
-vim.cmd[[onoremap al :normal val<CR>]]
 
 local bgcolor = 234
 vim.cmd(string.format([[highlight Normal cterm=NONE gui=NONE ctermbg=%s ctermfg=252 guibg=#1c1e26 guifg=#d5d8da]], bgcolor))
@@ -30,9 +26,12 @@ vim.cmd(string.format([[highlight NonText cterm=NONE gui=NONE ctermbg=%s ctermfg
 
 vim.cmd(string.format([[highlight Pmenu cterm=NONE gui=NONE ctermbg=%s ctermfg=252 guifg=#1c1e26 guibg=#d5d8da]], bgcolor))
 vim.cmd(string.format([[highlight PmenuThumb cterm=NONE gui=NONE ctermbg=%s guibg=#1c1e26]], bgcolor))
+
+vim.cmd(string.format([[highlight Comment cterm=NONE gui=NONE ctermfg=242 guifg=#6c6f93]]))
+vim.cmd(string.format([[highlight Identifier cterm=NONE gui=NONE ctermfg=203 guifg=#e95678]]))
+
 vim.cmd[[highlight Delimiter cterm=NONE gui=NONE ctermfg=15 guifg=#21bfc2]]
 
-vim.cmd[[highlight Visual cterm=NONE gui=NONE ctermbg=189 guibg=#272c42]]
-vim.cmd[[highlight TelescopePreviewLine cterm=NONE gui=NONE ctermbg=48 guibg=#272c42]]
+vim.cmd[[highlight Visual cterm=NONE gui=NONE ctermbg=31 guibg=#272c42]]
 
 vim.api.nvim_set_hl(0, "@attribute.zig", { link = "Statement" })

@@ -15,15 +15,14 @@ return require('packer').startup(function(use)
         requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim", "nvim-telescope/telescope-fzy-native.nvim" }
     }
 
-	use 'morhetz/gruvbox'
+	-- use {'morhetz/gruvbox', config = function() vim.cmd.colorscheme("gruvbox") end }
     use 'ntk148v/vim-horizon'
     use 'itchyny/lightline.vim'
 
 	use ('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
     use ('nvim-tree/nvim-web-devicons')
-    -- use ('LhKipp/nvim-nu', { run = ":TSInstall nu" })
+    use ('LhKipp/nvim-nu', { run = ":TSInstall nu" })
     use 'm4xshen/autoclose.nvim'
-    use {'kaarmu/typst.vim', ft = {'typst'}}
 
 	use {
 		'VonHeikemen/lsp-zero.nvim',
