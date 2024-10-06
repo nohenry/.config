@@ -1,5 +1,4 @@
 require("ocrap")
--- require("autoclose").setup()
 vim.cmd[[colorscheme horizon]]
 
 vim.g.lightline = {
@@ -8,7 +7,6 @@ vim.g.lightline = {
 
 vim.o.cursorline = true
 vim.o.cursorlineopt = 'number'
-
 
 local bgcolor = 234
 vim.cmd(string.format([[highlight Normal cterm=NONE gui=NONE ctermbg=%s ctermfg=252 guibg=#1c1e26 guifg=#d5d8da]], bgcolor))

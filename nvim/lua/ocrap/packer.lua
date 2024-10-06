@@ -6,7 +6,6 @@ return require('packer').startup(function(use)
 
 	use {
 		'nvim-telescope/telescope.nvim', tag = '0.1.4',
-		-- or                            , branch = '0.1.x',
 		requires = { {'nvim-lua/plenary.nvim'} }
 	}
 
@@ -15,14 +14,11 @@ return require('packer').startup(function(use)
         requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim", "nvim-telescope/telescope-fzy-native.nvim" }
     }
 
-	-- use {'morhetz/gruvbox', config = function() vim.cmd.colorscheme("gruvbox") end }
     use 'ntk148v/vim-horizon'
     use 'itchyny/lightline.vim'
 
 	use ('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
     use ('nvim-tree/nvim-web-devicons')
-    use ('LhKipp/nvim-nu', { run = ":TSInstall nu" })
-    use 'm4xshen/autoclose.nvim'
 
 	use {
 		'VonHeikemen/lsp-zero.nvim',
@@ -41,21 +37,13 @@ return require('packer').startup(function(use)
 		}
 	}
 
-    use({
-        "nvim-treesitter/nvim-treesitter-textobjects",
-        after = "nvim-treesitter",
-        requires = "nvim-treesitter/nvim-treesitter",
-    })
-
     use ('nvim-treesitter/playground')
-
     use ('tpope/vim-commentary')
 
     use({
         "kylechui/nvim-surround",
         tag = "*", -- Use for stability; omit to use `main` branch for the latest features
         config = function()
-            print ("bruh")
             require("nvim-surround").setup({
                 keymaps = {
                     normal = "ms",
