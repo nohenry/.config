@@ -1,0 +1,60 @@
+{
+    "$schema": "https://zed.dev/schema/themes/v0.2.0.json",
+    "name": "My Cool Theme",
+    "author": "You!",
+    "themes": [
+        {
+            "name": "My Cool Dark Theme",
+            "appearance": "dark",
+            "style": {
+                "editor.background": "#121212",
+                "editor.highlighted_line.background": null,
+                "editor.active_line.background": "#ffffff0a",
+                "editor.line_number": "#4e4e4e",
+                "editor.active_line_number": "#ffd700",
+                "editor.document_highlight.bracket_background": "#3a3a3a",
+                "syntax": {
+                    "constant": {
+                        "color": "#ff875f"
+                    },
+                    "number": {
+                        "color": "#ff875f"
+                    },
+                    "string": {
+                        "color": "#ff875f"
+                    },
+                    "type": {
+                        "color": "#ff875f"
+                    },
+                    "variable": {
+                        "color": "#827925"
+                    },
+                    "property": {
+                        "color": "#ff5f5f"
+                    },
+                    "module": {
+                        "color": "#ff5f5f"
+                    },
+                    "member": {
+                        "color": "#ff5f5f"
+                    },
+                    "function": {
+                        "color": "#00afaf"
+                    },
+                    "operator": {
+                        "color": "#00afaf"
+                    },
+                    "keyword": {
+                        "color": "#d75fff"
+                    },
+                    "label": {
+                        "color": "#d75fff"
+                    },
+                    "comment": {
+                        "color": "#6c6c6c"
+                    }
+                }
+            }
+        }
+    ]
+}

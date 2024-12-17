@@ -1,0 +1,83 @@
+{
+    "$schema": "https://zed.dev/schema/themes/v0.2.0.json",
+    "name": "VaDark",
+    "author": "You!",
+    "themes": [
+        {
+            "name": "VaDark",
+            "appearance": "dark",
+            "style": {
+                "editor.background": "#1E1E1E",
+                "editor.gutter.background": "#1e1e1e",
+                "editor.highlighted_line.background": null,
+                "editor.active_line.background": "#ffffff0a",
+                "editor.line_number": "#4e4e4e",
+                "editor.active_line_number": "#ffd700",
+                "editor.document_highlight.bracket_background": "#3a3a3a",
+                "editor.foreground": "#bdb78b",
+                "syntax": {
+                    "constant": {
+                        "color": "#b5cea8"
+                    },
+                    "number": {
+                        "color": "#b5cea8"
+                    },
+                    "string": {
+                        "color": "#d69d85"
+                    },
+                    "type": {
+                        "color": "#ffd700"
+                    },
+                    "variable": {
+                        "color": "#bdb78b"
+                    },
+                    "property": {
+                        "color": "#bdb78b"
+                    },
+                    "module": {
+                        "color": "#b8d7a3"
+                    },
+                    "member": {
+                        "color": "#bdb78b"
+                    },
+                    "function": {
+                        "color": "#ff8000"
+                    },
+                    "function.macro": {
+                        "color": "#ffffff"
+                    },
+                    "operator": {
+                        "color": "#b4b4b4"
+                    },
+                    "boolean": {
+                        "color": "#569cd6"
+                    },
+                    "punctuation": {
+                        "color": "#b4b4b4"
+                    },
+                    "tag": {
+                        "color": "#569cd6"
+                    },
+                    "keyword": {
+                        "color": "#569cd6"
+                    },
+                    "keyword.conditional": {
+                        "color": "#d8a0df"
+                    },
+                    "keyword.repeat": {
+                        "color": "#d8a0df"
+                    },
+                    "keyword.exception": {
+                        "color": "#d8a0df"
+                    },
+                    "label": {
+                        "color": "#569cd6"
+                    },
+                    "comment": {
+                        "color": "#6c6c6c"
+                    }
+                }
+            }
+        }
+    ]
+}

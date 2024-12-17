@@ -1,0 +1,52 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run the `open default settings` command
+// from the command palette or from `Zed` application menu.
+{
+    // "base_keymap": "Emacs",
+    "theme": "VaDark",
+    "enable_language_server": true,
+    "git": {
+        "inline_blame": {
+            "enabled": false
+        }
+    },
+    "ui_font_features": {
+        "calt": true
+    },
+    "ui_font_size": 18,
+    "buffer_font_family": "Cascadia Mono",
+    "buffer_font_size": 18,
+    "buffer_font_weight": 400,
+    "buffer_font_features": {
+        "calt": false
+    },
+    "gutter": {
+        "folds": false,
+        "code_actions": false
+    },
+    "scroll_beyond_last_line": "one_page",
+    "lsp": {
+        "rust-analyzer": {},
+        "clangd": {
+            "binary": {
+                "arguments": [
+                    "-header-insertion=never",
+                ]
+            }
+        }
+    },
+    "prettier": {},
+    "tab_size": 4,
+    "format_on_save": "off",
+    "vim_mode": true,
+    "file_types": {
+        "C": [
+            "*.m"
+        ]
+    },
+}
