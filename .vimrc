@@ -21,8 +21,8 @@ let g:mytheme_contrast_dark='hard'
 set termguicolors
 " colorscheme GruberDarker
 " colorscheme gruvbox
-colorscheme mytheme
-
+" colorscheme mytheme
+set noesckeys
 " colorscheme Horizon
 "autocmd vimenter * ++nested colorscheme gruvbox
 set background=dark
