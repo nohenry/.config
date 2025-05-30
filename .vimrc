@@ -1,39 +1,47 @@
 
 source $VIMRUNTIME/vimrc_example.vim
-
-" syntax on
-
 set ts=4 sw=4
-" set timeout
-" set ttimeout
-" set timeoutlen=20
-" set ttimeoutlen=0
-
+set belloff=all
 set nu
-
 set incsearch
 set hlsearch
-set belloff=all
-
-let g:gruber_terminal_bold = 1
-let g:mytheme_contrast_dark='hard'
-
-set termguicolors
-" colorscheme GruberDarker
-" colorscheme gruvbox
-" colorscheme mytheme
-set noesckeys
-" colorscheme Horizon
-"autocmd vimenter * ++nested colorscheme gruvbox
-set background=dark
-
-autocmd BufNewFile,BufRead *.txt set filetype=c
-autocmd BufNewFile,BufRead *.txt hi Error NONE
-
+"set noesckeys
 set splitright
 set textwidth=0 
 set wrapmargin=0
 set wrap!
+set timeout timeoutlen=1000 ttimeoutlen=10
+
+set cinoptions=:0,l1
+
+" NetRw
+hi! link netrwMarkFile Search
+let g:netrw_fastbrowse = 2
+let g:netrw_keepj = ""
+
+call plug#begin()
+Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-surround'
+Plug 'machakann/vim-highlightedyank'
+Plug 'Yohannfra/Vim-Goto-Header'
+
+" Plug 'pulkomandy/c.vim'
+Plug 'bfrg/vim-c-cpp-modern'
+call plug#end()
+
+set termguicolors
+set background=dark
+colorscheme distinguished
+" colorscheme xoria256
+" autocmd vimenter * ++nested colorscheme gruvbox
+
+nnoremap <C-h> 10<C-w><
+nnoremap <C-l> 10<C-w>>
+
+
+autocmd BufNewFile,BufRead *.txt set filetype=c
+autocmd BufNewFile,BufRead *.txt hi Error NONE
 
 if has('win32') || has('win64')
 	if !isdirectory($HOME . "/vimfiles/backup")
@@ -80,6 +88,29 @@ xnoremap * y/\V<C-R>=escape(@",'/\')<cr><cr>
 
 " file
 nnoremap <leader>ff :Explore<cr>
+nnoremap <leader>fs :call SearchFile()<cr>
+
+function! SearchFile()
+	call inputsave()
+	let l:file = input("File: ")
+	call inputrestore()
+	execute 'Explore */' . l:file
+endfunction
+
+nnoremap <silent> <leader>t :call OpenTerminal()<cr>
+tnoremap <silent> <C-w>t <C-w>:call OpenTerminal()<cr>
+tnoremap <silent> <C-w>q <C-w>:q!<cr>
+
+autocmd VimEnter * ++once let s:buf = term_start("bash", { 'hidden': 1, 'term_kill': 'kill' })
+autocmd BufDelete * if bufnr('%') == s:buf | let s:buf = term_start("bash", { 'hidden': 1, 'term_kill': 'kill' }) | endif
+
+function! OpenTerminal()
+	if &buftype == 'terminal'
+		normal <C-w>:hide
+	else
+		execute 'vert sb' . s:buf
+	endif
+endfunction
 
 " remapping for easy configuration
 if has('win32') || has('win64')
@@ -139,29 +170,11 @@ augroup END
 
 let g:cpp_member_highlight = 1
 
-call plug#begin()
-Plug 'tpope/vim-sensible'
-Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-surround'
-Plug 'Tetralux/odin.vim'
-Plug 'machakann/vim-highlightedyank'
-Plug 'beyondmarc/hlsl.vim'
-Plug 'vim-scripts/zoom.vim'
-Plug 'Yohannfra/Vim-Goto-Header'
-Plug 'bfrg/vim-c-cpp-modern'
-" Plug 'mg979/vim-visual-multi'
-
-Plug 'ntk148v/vim-horizon'
-Plug 'scttymn/vim-twilight'
-Plug 'danilo-augusto/vim-afterglow'
-Plug 'morhetz/gruvbox'
-
-Plug 'kaarmu/typst.vim'
-call plug#end()
 "let g:VM_custom_remaps = {'<c-k>': '<c-n>' }
 
-let g:goto_header_associate_cpp_h = 1
+" let g:goto_header_associate_cpp_h = 1
 let g:goto_header_fd_binary_name = 'fd'
+let g:goto_header_includes_dirs = [".", "/usr/include", "..", "~"]
 command! GotoHeader :call goto_header#GotoHeader()
 command! GotoHeaderSwitch :call goto_header#Switch()
 command! GotoHeaderDirect :call goto_header#Direct()
@@ -190,3 +203,10 @@ function! SynStack()
   echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
 endfunc
 autocmd BufNew,BufNewFile,BufRead *.msl :set filetype=cpp
+
+let &t_SI = "\<Esc>[6 q"
+" Underline in replace mode
+let &t_SR = "\<Esc>[4 q"
+" Block in other modes
+let &t_EI = "\<Esc>[2 q"
+
