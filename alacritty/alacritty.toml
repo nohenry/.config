@@ -1,26 +1,49 @@
-[colors.bright]
-black = "#565656"
-blue = "#8cd0d3"
-cyan = "#74fdf3"
-green = "#b8e36d"
-magenta = "#ac7bf0"
-red = "#ff4351"
-white = "#ffffff"
-yellow = "#ffd952"
+# [colors.bright]
+# black = "#565656"
+# blue = "#8cd0d3"
+# cyan = "#74fdf3"
+# green = "#b8e36d"
+# magenta = "#ac7bf0"
+# red = "#ff4351"
+# white = "#ffffff"
+# yellow = "#ffd952"
+
+# [colors.normal]
+# black = "#1d1f21"
+# blue = "#008df8"
+# cyan = "#00d8eb"
+# green = "#1cdd83"
+# magenta = "#fc75ff"
+# red = "#ff000f"
+# white = "#ffffff"
+# yellow = "#ffb900"
 
 [colors.normal]
-black = "#1d1f21"
-blue = "#008df8"
-cyan = "#00d8eb"
-green = "#1cdd83"
-magenta = "#fc75ff"
-red = "#ff000f"
-white = "#ffffff"
-yellow = "#ffb900"
+black = "#0C0C0C"
+blue = "#0037DA"
+cyan = "#3A96DD"
+green = "#13A10E"
+purple = "#881798"
+red = "#C50F1F"
+white = "#CCCCCC"
+yellow = "#C19C00"
+
+[colors.bright]
+black = "#767676"
+blue = "#3B78FF"
+cyan = "#61D6D6"
+green = "#16C60C"
+purple = "#B4009E"
+red = "#E74856"
+white = "#F2F2F2"
+yellow = "#F9F1A5"
 
 [colors.primary]
-background = "#222222"
-foreground = "#ffffff"
+background = "#0C0C0C"
+foreground = "#CCCCCC"
+
+[colors]
+draw_bold_as_bright = true
 
 [font.normal]
 family = "MesloLGSDZ Nerd Font Mono"
