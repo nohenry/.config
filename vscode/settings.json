@@ -1,0 +1,284 @@
+{
+    "explorer.confirmDelete": false,
+    "git.enableSmartCommit": true,
+    "git.confirmSync": false,
+    "files.autoSave": "afterDelay",
+    "cmake.configureOnOpen": false,
+    "editor.detectIndentation": false,
+    "explorer.confirmDragAndDrop": false,
+    // "editor.bracketPairColorization.enabled": false,
+    "vim.useSystemClipboard": true,
+    "security.workspace.trust.untrustedFiles": "open",
+    "files.associations": {
+        "*.b": "c",
+    },
+    "editor.tokenColorCustomizations": {
+        //     "types": "#FFD700",
+        //     "functions": "#FF8000",
+        //     "variables": "#BDB76B",
+        // "storage": "#569CD6",
+        "[Vim Dark Hard]": {
+            // "textMateRules": [
+            //     {
+            //         "scope": "storage.modifier",
+            //         "settings": {
+            //             "foreground": "#FB4934",
+            //         }
+            //     },
+            //     {
+            //         "scope": "entity.name.function",
+            //         "settings": {
+            //             "foreground": "#FF8000",
+            //         }
+            //     }
+            // ]
+        },
+        // "textMateRules": [
+        //     {
+        //         "scope": "storage.modifier",
+        //         "settings": {
+        //             "foreground": "#FB4934",
+        //         }
+        //     }
+        //         {
+        //             "scope": "keyword.operator.new",
+        //             "settings": {
+        //                 "foreground": "#D8A0DF",
+        //                 "fontStyle": "italic"
+        //             }
+        //         },
+        //         {
+        //             "scope": "keyword.operator.logical",
+        //             "settings": {
+        //                 "foreground": "#D8A0DF",
+        //                 "fontStyle": "italic"
+        //             }
+        //         },
+        //         {
+        //             "scope": "keyword.operator.type",
+        //             "settings": {
+        //                 "foreground": "#569CD6",
+        //             }
+        //         },
+        //         {
+        //             "scope": "support.other.namespace",
+        //             "settings": {
+        //                 "foreground": "#b5cea8",
+        //             }
+        //         },
+        //         {
+        //             "scope": "support.constant",
+        //             "settings": {
+        //                 "foreground": "#aca761",
+        //                 "fontStyle": "bold"
+        //             }
+        //         },
+        //         {
+        //             "scope": "constant.other",
+        //             "settings": {
+        //                 "foreground": "#aca761",
+        //                 "fontStyle": "bold"
+        //             }
+        //         },
+        //         {
+        //             "scope": "entity.name.goto-label",
+        //             "settings": {
+        //                 "foreground": "#D8A0DF",
+        //                 "fontStyle": "italic"
+        //             }
+        //         },
+        //         {
+        //             "scope": "keyword.control",
+        //             "settings": {
+        //                 "foreground": "#D8A0DF",
+        //             }
+        //         },
+        //         {
+        //             "scope": "support.other",
+        //             "settings": {
+        //                 "foreground": "#aca761",
+        //             }
+        //         },
+        //         {
+        //             "scope": "punctuation.separator",
+        //             "settings": {
+        //                 "foreground": "#D4D4D4",
+        //             }
+        //         },
+        //         {
+        //             "scope": "punctuation.separator",
+        //             "settings": {
+        //                 "foreground": "#D4D4D4",
+        //             }
+        //         },
+        //         {
+        //             "scope": "punctuation.definition.variable",
+        //             "settings": {
+        //                 "fontStyle": "bold"
+        //             }
+        //         },
+        // ],
+    },
+    "editor.semanticTokenColorCustomizations": {
+        "rules": {
+            // "type": "#FFD700",
+            // "enum": "#FFD700",
+            // "enumMember": "#e96f61",
+            // "enumMember": "#22c0ff",
+            // "struct": "#FFD700",
+            // "union": "#FFD700",
+            // "keyword": "#569CD6",
+            // "variable": "#BDB76B",
+            // "property": "#BDB76B",
+            // "parameter": "#BDB76B",
+            // "namespace": "#b5cea8",
+            // "method": "#FF8000",
+            // "function": "#FF8000",
+            // "macro": "#FF8000",
+            // "*.controlFlow": "#D8A0DF",
+            // "macro": "#c76fbe"
+        }
+    },
+    "lang.lsPath": "C:\\dev\\parsely\\target\\debug\\parsely-lsp.exe",
+    "par.lsPath": "C:\\dev\\parsely\\target\\debug\\parsely-lsp.exe",
+    "window.zoomLevel": 1,
+    "zig.zls.debugLog": true,
+    // "zig.zls.zigLibPath": "/usr/include/bin",
+    "[typescript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "javascript.format.semicolons": "insert",
+    "typescript.format.semicolons": "insert",
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "par.debug": true,
+    "remote.SSH.remotePlatform": {
+        "10.0.0.218": "linux",
+        "10.0.0.106": "linux"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "[elixir]": {
+        "editor.defaultFormatter": "animus-coop.vscode-elixir-mix-formatter"
+    },
+    "git.openRepositoryInParentFolders": "never",
+    "editor.semanticHighlighting.enabled": true,
+    "typst-lsp.serverPath": "",
+    "terminal.integrated.enableMultiLinePasteWarning": false,
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["<leader>", "f", "f"],
+            "commands": [
+                "workbench.action.quickOpen"
+            ]
+        },
+        {
+            "before": [
+                "<C-u>"
+            ],
+            "after": [
+                "<C-u>", "z", "z"
+            ]
+        },
+        {
+            "before": [
+                "<C-d>"
+            ],
+            "after": [
+                "<C-d>", "z", "z"
+            ]
+        },
+        {
+            "before": [
+                "<"
+            ],
+            "after": [
+                "<", "<"
+            ]
+        },
+        {
+            "before": [
+                ">"
+            ],
+            "after": [
+                ">", ">"
+            ]
+        }
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "<"
+            ],
+            "after": [
+                "<", "<", "<Esc>", "g", "v"
+            ]
+        },
+        {
+            "before": [
+                ">"
+            ],
+            "after": [
+                ">", ">", "<Esc>", "g", "v"
+            ]
+        },
+        {
+            "before": [
+                "R"
+            ],
+            "after": [
+                "\"", "_", "d", "P"
+            ]
+        }
+    ],
+    "vim.leader": " ",
+    "zig.zls.semanticTokens": "none",
+    "dart.flutterSdkPath": "E:\\dev\\repos\\flutter",
+    "cmake.showOptionsMovedNotification": false,
+    "zig.zls.enableInlayHints": false,
+    "window.commandCenter": false,
+    "window.menuBarVisibility": "compact",
+    "[rust]": {
+        "editor.defaultFormatter": "rust-lang.rust-analyzer"
+    },
+    "vim.sneak": true,
+    "vim.highlightedyank.enable": true,
+    "vim.highlightedyank.color": "rgba(39, 163, 5, 0.3)",
+    "cmake.pinnedCommands": [
+        "workbench.action.tasks.configureTaskRunner",
+        "workbench.action.tasks.runTask"
+    ],
+    "zig.zls.enabled": "on",
+    "ols.prompt.AskCreateOLS": false,
+    "redhat.telemetry.enabled": false,
+    "codetogether.userName": "Olibub",
+    "haskell.manageHLS": "GHCup",
+    "editor.matchBrackets": "near",
+    "print.folder.fileNames": true,
+    "print.folder.include": [],
+    "print.folder.exclude": [
+        "{bin,obj,out}",
+        "node_modules",
+        "data",
+        "**/*.{bin,exe,dll,hex,pdb,pdf,pfx,png,jpg,gif,bmp,suo,design}"
+    ],
+    "print.folder.maxLines": 1200,
+    "print.folder.maxFiles": 30,
+    "print.folder.includeFileList": false,
+    "go.showWelcome": false,
+    "workbench.welcomePage.walkthroughs.openOnInstall": false,
+    "workbench.startupEditor": "terminal",
+    "cSpell.enabled": false,
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+    "zig.path": "zig",
+    "editor.fontFamily": " Menlo, Monaco, 'Courier New', monospace"
+
+}
