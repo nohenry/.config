@@ -31,21 +31,21 @@ Plug 'joshdick/onedark.vim'
 
 " Plug 'pulkomandy/c.vim'
 Plug 'bfrg/vim-c-cpp-modern'
+" Plug 'rluba/jai.vim'
 call plug#end()
+
+augroup colorset
+	autocmd!
+	let s:white = { "gui": "#CBD2DF", "cterm": "145", "cterm16" : "7" }
+	let s:bg = { "gui": "#22262E", "cterm": "145", "cterm16" : "7" }
+	autocmd ColorScheme onedark call onedark#set_highlight("Normal", { "fg": s:white, "bg": s:bg })
+augroup END
+
+
 
 set termguicolors
 set background=dark
 colorscheme onedark
-
-if (has("autocmd") && !has("gui_running"))
-  augroup colorset
-    autocmd!
-    let s:white = { "gui": "#CBD2DF", "cterm": "145", "cterm16" : "7" }
-    let s:bg = { "gui": "#22262E", "cterm": "145", "cterm16" : "7" }
-    autocmd ColorScheme onedark call onedark#set_highlight("Normal", { "fg": s:white, "bg": s:bg })
-  augroup END
-endif
-
 " colorscheme distinguished
 
 nnoremap <C-h> 10<C-w><
