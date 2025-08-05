@@ -9,7 +9,7 @@ set hlsearch
 set splitright
 set textwidth=0 
 set wrapmargin=0
-set wrap!
+set nowrap
 set timeout timeoutlen=1000 ttimeoutlen=10
 
 set cinoptions=:0,l1
@@ -25,6 +25,9 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'machakann/vim-highlightedyank'
 Plug 'Yohannfra/Vim-Goto-Header'
+Plug 'Lokaltog/vim-distinguished'
+Plug 'ntk148v/vim-horizon'
+Plug 'joshdick/onedark.vim'
 
 " Plug 'pulkomandy/c.vim'
 Plug 'bfrg/vim-c-cpp-modern'
@@ -32,9 +35,18 @@ call plug#end()
 
 set termguicolors
 set background=dark
-colorscheme distinguished
-" colorscheme xoria256
-" autocmd vimenter * ++nested colorscheme gruvbox
+colorscheme onedark
+
+if (has("autocmd") && !has("gui_running"))
+  augroup colorset
+    autocmd!
+    let s:white = { "gui": "#CBD2DF", "cterm": "145", "cterm16" : "7" }
+    let s:bg = { "gui": "#22262E", "cterm": "145", "cterm16" : "7" }
+    autocmd ColorScheme onedark call onedark#set_highlight("Normal", { "fg": s:white, "bg": s:bg })
+  augroup END
+endif
+
+" colorscheme distinguished
 
 nnoremap <C-h> 10<C-w><
 nnoremap <C-l> 10<C-w>>
